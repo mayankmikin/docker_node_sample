@@ -32,3 +32,13 @@ Now run this command to install all packages
 Flow goes like this :
 
 http://localhost:4000/api  -> calls server.js -> calls routes.js -> calls search.js(in routes) -> calls searhCtrl.js -> calls TMDBService.js
+
+
+*** Note please add below thing to git ignore to ignore node modules(mostly dependecies) and only focus on code that you are writing
+
+*node_modules/*
+
+
+
+
+# DOCKER STUFF
