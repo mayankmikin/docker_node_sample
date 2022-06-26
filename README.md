@@ -42,3 +42,18 @@ http://localhost:4000/api  -> calls server.js -> calls routes.js -> calls search
 
 
 # DOCKER STUFF
+To run the microservice first we need to create a docker image using the following command.
+
+To build image:
+docker build -t image_name .
+
+now build a docker file DockerFile
+build image 
+> docker build -t node_api_1 .
+
+
+To run container from image:
+
+docker run -d -p {local_port}:{container_port} --name container_name image_name
+run the image 
+>  docker run -p 4000:4000 --name node_api_1 node_api_1
