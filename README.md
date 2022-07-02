@@ -29,7 +29,12 @@ create index js file  for defining routes:
 Now run this command to install all packages
 > npm install
 
-Flow goes like this :
+
+### To locally run this server run command :
+
+> node server.js
+
+Application Flow goes like this :
 
 http://localhost:4000/api  -> calls server.js -> calls routes.js -> calls search.js(in routes) -> calls searhCtrl.js -> calls TMDBService.js
 
@@ -57,3 +62,10 @@ To run container from image:
 docker run -d -p {local_port}:{container_port} --name container_name image_name
 run the image 
 >  docker run -p 4000:4000 --name node_api_1 node_api_1
+
+
+
+to delete images run this command 
+> docker images -a | grep "node*" | awk '{print $3}' | xargs docker rmi -f
+
+where grep "node*"  means I want to delete all the images that starts with name "node"
