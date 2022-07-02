@@ -64,6 +64,12 @@ run the image
 >  docker run -p 4000:4000 --name node_api_1 node_api_1
 
 
+#### to check docker network
+
+> docker network ls
+
+
+
 
 to delete images run this command 
 > docker images -a | grep "node*" | awk '{print $3}' | xargs docker rmi -f
