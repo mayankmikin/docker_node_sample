@@ -75,3 +75,29 @@ to delete images run this command
 > docker images -a | grep "node*" | awk '{print $3}' | xargs docker rmi -f
 
 where grep "node*"  means I want to delete all the images that starts with name "node"
+
+
+
+### Kubernetes stuff
+install minikube and start it
+> minikube start
+
+Start Minikube
+
+minikube start --memory 4096
+
+Point docker to Minikube
+
+> eval $(minikube docker-env)
+
+#check if you have k8s. images by default
+> docker images
+
+# check all resources in k8s
+> kubectl get all
+
+# check pods
+> kubectl get pods
+
+# Run kubernetes cluster
+> kubectl apply -f kubedeploy.yaml
