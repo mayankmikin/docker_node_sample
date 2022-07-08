@@ -101,3 +101,14 @@ Point docker to Minikube
 
 # Run kubernetes cluster
 > kubectl apply -f kubedeploy.yaml
+
+# now  we need to know the ip address of this minikube cluster 
+> minikube ip
+lets say we get some ip as :192.168.58.2
+
+so our application is now exposed as
+http://192.168.58.2:30001/api
+at this url you will see the value 
+
+
+
